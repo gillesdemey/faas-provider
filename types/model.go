@@ -44,6 +44,10 @@ type FunctionDeployment struct {
 	// ReadOnlyRootFilesystem removes write-access from the root filesystem
 	// mount-point.
 	ReadOnlyRootFilesystem bool `json:"readOnlyRootFilesystem,omitempty"`
+
+	// Enable or disable automounting service account token
+	// See https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
+	AutomountServiceAccountToken bool `json:"automountServiceAccountToken,omitempty"`
 }
 
 // Secret for underlying orchestrator
